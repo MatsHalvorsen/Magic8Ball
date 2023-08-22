@@ -28,9 +28,8 @@ const answers = [
 updateView();
 function updateView(){
     document.getElementById('app').innerHTML = /*HTML*/ `
-    <h1 id="header">Magic 8 Ball</h1>
         <br/>
-    Ask my anything:
+    Ask my anything: <br/>
     <input type="text">
     <button onclick="fortune()">Get fortune</button>
     <div id="app">Answer: </div>
@@ -40,9 +39,8 @@ function updateView(){
 // CONTROLLER
 function fortune() {
     let randomEl = answers[Math.floor(Math.random() * answers.length)];
-    document.getElementById('app').innerHTML = ` <h1 id="header">Magic 8 Ball</h1>
-    <br/>
-    Ask my anything:
+    document.getElementById('app').innerHTML = ` 
+    Ask my anything: <br/>
     <input type="text">
     <button onclick="fortune()">Get fortune</button>
     <div id="app">Answer: ${randomEl} </div>
