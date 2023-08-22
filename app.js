@@ -30,6 +30,7 @@ function updateView(){
     document.getElementById('app').innerHTML = /*HTML*/ `
     <div id="app">Answer: </div>
     <br/>
+    <input>
     <button onclick="fortune()">Get fortune</button>
     `;
 }
@@ -45,5 +46,6 @@ function fortune() {
     document.getElementById('app').textContent = `Answer: ${randomEl}`;
 }
 
+updateView();
  
    
