@@ -28,24 +28,25 @@ const answers = [
 updateView();
 function updateView(){
     document.getElementById('app').innerHTML = /*HTML*/ `
-    <div id="app">Answer: </div>
-    <br/>
-    <input>
+    <h1 id="header">Magic 8 Ball</h1>
+        <br/>
+    Ask my anything:
+    <input type="text">
     <button onclick="fortune()">Get fortune</button>
+    <div id="app">Answer: </div>
+
     `;
 }
 // CONTROLLER
-/*function getFortune(answers) {
-    return answers[ Math.floor(Math.random() * answers.length)];
-    updateView();
-}
-*/
-
 function fortune() {
     let randomEl = answers[Math.floor(Math.random() * answers.length)];
-    document.getElementById('app').textContent = `Answer: ${randomEl}`;
+    document.getElementById('app').innerHTML = ` <h1 id="header">Magic 8 Ball</h1>
+    <br/>
+    Ask my anything:
+    <input type="text">
+    <button onclick="fortune()">Get fortune</button>
+    <div id="app">Answer: ${randomEl} </div>
+    `;
+    
 }
 
-updateView();
- 
-   
